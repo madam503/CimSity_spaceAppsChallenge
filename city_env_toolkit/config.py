@@ -1,6 +1,6 @@
 # --- API Keys ---
-GOOGLE_API_KEY = 'AIzaSyBgYAFLSiiB_N26UblyRON4xgEtS1XAKkQ'
-OPENWEATHER_API_KEY = 'a8f99d184dc8b2ab5ff0c09e7f05147e'
+GOOGLE_API_KEY = 'your api key'
+OPENWEATHER_API_KEY = 'your api key'
 
 # --- Project IDs & Paths ---
 GEE_PROJECT_ID = "pivotal-bonbon-342314"
@@ -25,4 +25,5 @@ CITIES = {
         "gee_adm_name": "Cheju-do",
         "csv_path": "jeju_atl08_analysis.csv"
     }
+
 }
