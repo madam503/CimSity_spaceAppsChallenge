@@ -2,6 +2,12 @@ import ee
 import pandas as pd
 from city_env_toolkit.config import GEE_PROJECT_ID, CITIES
 
+try:
+    ee.Initialize(project=GEE_PROJECT_ID)
+    print("Google Earth Engine has been initialized.")
+except Exception as e:
+    print(f"Google Earth Engine initialize error: {e}")
+
 def get_ndvi_for_area(city_name: str):
     """Calculates the average NDVI for a specified region and returns it as a string."""
     city_info = CITIES[city_name]
@@ -61,4 +67,5 @@ def get_natural_environment_info(city_name: str):
     except FileNotFoundError:
         return f"Natural environment data file ({csv_path}) not found for {city_name}."
     except Exception as e:
+
         return f"An error occurred while analyzing natural environment information: {e}"
